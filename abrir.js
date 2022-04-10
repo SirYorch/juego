@@ -12,4 +12,4 @@
         pantalla.classList.toggle(`desactivado`)
     }
     inicioNormal.addEventListener(`click`,subir)
-    
+    inicioFAcil.addEventListener(`click`,subir)
