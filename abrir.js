@@ -6,7 +6,7 @@
     let grupo = 1 ;
     function subir(){
         pantalla.classList.toggle(`desactivado`);
-        repartir(1)
+        repartir()
     }
     function bajar(){
         pantalla.classList.toggle(`desactivado`)

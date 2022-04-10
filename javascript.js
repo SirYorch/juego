@@ -1,7 +1,9 @@
 
 
-    function repartir(nivel){
-        mesa.innerHTML = ``
+    function repartir(){
+
+        mesa.innerHTML = `   `
+        let nivel = grupo
     if(nivel == 1){conjunto = conjuntoUno.concat(conjuntoUno)} 
     else if(nivel==2){ conjunto = conjuntoDos.concat(conjuntoDos)}
     else if(nivel==3){ conjunto = conjuntoTres.concat(conjuntoTres)}
@@ -34,6 +36,8 @@
                     if(completa.length == cartaAbierta.length && nivel <5){
                         nivel++;
                         desplegarMenu();
+                        mesa.innerHTML = ``
+
                     }
             }else {
             setTimeout(

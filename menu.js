@@ -3,13 +3,16 @@ let siguiente = document.querySelector(`.siguiente`);
 let principal = document.querySelector(`.principal`);
 function desplegarMenu(){
     menu.classList.toggle(`desactivado`)
-        bajar()
     }
 function siguienteNivel(){
     menu.classList.toggle(`desactivado`);
-        grupo +1 ; 
-        repartir(grupo)
+    grupo++;
+    repartir();
 }
 
-principal.addEventListener(`click`, siguienteNivel);
-siguiente.addEventListener(`click`, desplegarMenu);
+function menuPrincipal(){
+    menu.classList.toggle(`desactivado`);
+    subir()
+}
+principal.addEventListener(`click`, menuPrincipal);
+siguiente.addEventListener(`click`, siguienteNivel);
