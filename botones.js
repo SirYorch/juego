@@ -65,18 +65,42 @@ let nivelCuatro = document.querySelector(`.cuatro`);
 nivelUno.addEventListener(`click`, function(){
     nivel = 1;
     generarCartas()
-});
+    carta = document.querySelectorAll(`.carta`);
+    //funcion para que cada carta que se cree tenga la funcion de abrir
+    carta.forEach(function(element){
+    element.addEventListener(`click`,abrir)
+    botonAtajo.classList.add(`desactivado`)}
+    )}
+);
 nivelDos.addEventListener(`click`,function(){
     nivel = 2;
     generarCartas()
+    carta = document.querySelectorAll(`.carta`);
+    //funcion para que cada carta que se cree tenga la funcion de abrir
+    carta.forEach(function(element){
+    element.addEventListener(`click`,abrir)
+    botonAtajo.classList.add(`desactivado`)}
+    )
 });
 nivelTres.addEventListener(`click`,function(){
     nivel = 3;
     generarCartas()
+    carta = document.querySelectorAll(`.carta`);
+    //funcion para que cada carta que se cree tenga la funcion de abrir
+    carta.forEach(function(element){
+    element.addEventListener(`click`,abrir)
+    botonAtajo.classList.add(`desactivado`)}
+    )
 });
 nivelCuatro.addEventListener(`click`,function(){
     nivel = 4;
     generarCartas()
+    carta = document.querySelectorAll(`.carta`);
+    //funcion para que cada carta que se cree tenga la funcion de abrir
+    carta.forEach(function(element){
+    element.addEventListener(`click`,abrir)
+    botonAtajo.classList.add(`desactivado`)}
+    )
 });
 
 function inicio(){
