@@ -5,28 +5,50 @@
         <link rel="apple-touch-icon" sizes="180x180" href="/icon/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/icon/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/icon/favicon-16x16.png">
-        <link rel="manifest" href="/site.webmanifest">        <title>Juego de memory</title>
+        <title>Juego de memory</title>
         <link rel="stylesheet" href="styles.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Merienda&family=Press+Start+2P&family=Reenie+Beanie&family=Rubik+Glitch&family=Syne+Mono&display=swap" rel="stylesheet">
+        <meta name="viewport" content=" width=device-width, initial-scale=1.0" >
     </head>
     <body>
-        <div class="encabezado"></div>
+        
+        <div class="encabezado">
+            <div class="contador"><div class="minutero">00</div>:<div class="segundero">00</div></div>
+            <div class="vidas">9</div>
+            <div class="atajo">X</div>
+        </div>
+        
         <div class="mesa">
             <div class="carta abierta"><div class="contenido">🏎</div></div>
         </div>
-        <div class="inicio">
+
+        <div class="inicio final desactivado">
+            <p>GAME OVER</p> 
+            <input type="submit" class="input principal" value="VOLVER A EMPEZAR" >
+        </div>
+        
+        <div class="inicio menu desactivado">
+            <input type="submit" class="input siguiente" value="SIGUIENTE NIVEL" >
+            <input type="submit" class="input principal" value="MENÚ PRINCIPAL" >
+        </div>
+
+        <div class="inicio" id="inicio">
             <input type="submit" class="normal input" VALUE="JUEGO NORMAL">
             <input type="submit" class="facil input" value="JUEGO FACIL">
         </div>
-        <div class="inicio final desactivado"><p>GAME OVER</p> <input type="submit" class="input nuevo" value="VOLVER A INICIAR" ></div>
-        <div class="inicio menu desactivado"><input type="submit" class="input siguiente" value="SIGUIENTE NIVEL" ><input type="submit" class="input principal" value="MENÚ PRINCIPAL" ></div>
 
+        <div class="niveles ">
+            <strong class="uno">NIVEL 1</strong>
+            <strong class="dos">NIVEL 2</strong>
+            <strong class="tres">NIVEL 3</strong>
+            <strong class="cuatro">NIVEL 4</strong>
+        </div>
     </body>
-    <script src="abrir.js"></script>
-    <script  src="generar.js"></script>
-    <script src="javascript.js"></script>
-    <script src="menu.js"></script>
-
+    <script src="variables.js"></script>
+    <script src="subirPantallas.js"></script>
+    <script src="contador.js"></script>
+    <script src="botones.js"></script>
+    <script src="barajar.js"></script>
 </html>

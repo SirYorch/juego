@@ -7,6 +7,7 @@ body{background-color:rgb(240, 240, 240);
     position:absolute;
     overflow:hidden;
     color:#666;
+    font-family: 'Rubik Glitch';
 }
 
 :root{
@@ -18,12 +19,6 @@ body{background-color:rgb(240, 240, 240);
     flex-wrap: wrap;
     justify-content: center;
     height:90vh;
-}
-.encabezado{
-    width:100vw;
-    height:10vh;
-    background:var(--main-color);
-    border-bottom:5px inset #666;
 }
 
 
@@ -123,4 +118,89 @@ body{background-color:rgb(240, 240, 240);
 p{
     font-size:200px;
     line-height: 50px;
+}
+
+/*    CONTADOR          */
+
+
+.contador{
+    height:7vh;
+    width:200px;
+    background-color:#ddd;
+    margin-left:15px;
+    color:#888;
+    font-size:55px;
+    text-align: center;
+    border-radius:30px;
+    border:7px double #ccc
+}
+.minutero , .segundero {
+    display:inline-block
+}
+.vidas{
+    width:7vh;
+    height:7vh;
+    background-color:#ddd;
+    margin-left:15%;
+    color:#888;
+    font-size:55px;
+    text-align: center;
+    border-radius:30px;
+    border:7px double #ccc
+}
+.atajo{
+    width:7vh;
+    height:7vh;
+    background-color:#ddd;
+    color:#888;
+    font-size:40px;
+    text-align: center;
+    border-radius:50%;
+    margin-left:35%;
+    padding-top:5px;
+    position:absolute;
+    right:15px;
+    top:10px;
+}
+.encabezado{
+    width:100vw;
+    height:10vh;
+    background:var(--main-color);
+    border-bottom:5px inset #666;
+    display:flex;
+    align-items: center;
+}
+@media screen and (min-width:600px) {
+    .vidas{
+        margin-left:34%;
+    }
+}
+.niveles{
+    position:absolute;
+    top:50px;
+    right:50px;
+    width:200px;
+    background-color:#aaa;
+    border-radius:20px;
+    overflow:hidden;
+    max-height:0px;
+}
+strong{display:block;
+    font-size:45px;
+    text-align: center;
+    line-height: 63px;;
+}
+
+@keyframes atajo {
+    from{max-height:0px;}
+    to{max-height:250px}
+}
+
+.oculto{
+    animation-name:atajo;
+    animation-duration:2s;
+    animation-fill-mode: forwards;
+}
+input{
+    font-family: 'Rubik Glitch';
 }
