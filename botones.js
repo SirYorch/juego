@@ -22,6 +22,8 @@ function inicioNormal(){
     carta.forEach(function(element){
     element.addEventListener(`click`,abrir)
     botonAtajo.classList.add(`desactivado`)
+    temporizador.classList.toggle(`desactivado`,false);
+    vida.classList.toggle(`desactivado`,false)
 
 
 })
@@ -29,6 +31,8 @@ function inicioNormal(){
 }
 function inicioFacil(){
     subirPantallaInicial();
+    botonAtajo.classList.toggle(`desactivado`,false)
+
     nivel = 1;
 
     // las cartas se deben seleccionar despues de generarlas
@@ -68,8 +72,9 @@ nivelUno.addEventListener(`click`, function(){
     carta = document.querySelectorAll(`.carta`);
     //funcion para que cada carta que se cree tenga la funcion de abrir
     carta.forEach(function(element){
-    element.addEventListener(`click`,abrir)
-    botonAtajo.classList.add(`desactivado`)}
+    element.addEventListener(`click`,abrir);
+    niveles.classList.toggle(`oculto`)
+    }
     )}
 );
 nivelDos.addEventListener(`click`,function(){
@@ -78,8 +83,9 @@ nivelDos.addEventListener(`click`,function(){
     carta = document.querySelectorAll(`.carta`);
     //funcion para que cada carta que se cree tenga la funcion de abrir
     carta.forEach(function(element){
-    element.addEventListener(`click`,abrir)
-    botonAtajo.classList.add(`desactivado`)}
+    element.addEventListener(`click`,abrir);
+    niveles.classList.toggle(`oculto`)
+    }
     )
 });
 nivelTres.addEventListener(`click`,function(){
@@ -88,8 +94,9 @@ nivelTres.addEventListener(`click`,function(){
     carta = document.querySelectorAll(`.carta`);
     //funcion para que cada carta que se cree tenga la funcion de abrir
     carta.forEach(function(element){
-    element.addEventListener(`click`,abrir)
-    botonAtajo.classList.add(`desactivado`)}
+    element.addEventListener(`click`,abrir);
+    niveles.classList.toggle(`oculto`)
+    }
     )
 });
 nivelCuatro.addEventListener(`click`,function(){
@@ -98,23 +105,16 @@ nivelCuatro.addEventListener(`click`,function(){
     carta = document.querySelectorAll(`.carta`);
     //funcion para que cada carta que se cree tenga la funcion de abrir
     carta.forEach(function(element){
-    element.addEventListener(`click`,abrir)
-    botonAtajo.classList.add(`desactivado`)}
+    element.addEventListener(`click`,abrir);
+    niveles.classList.toggle(`oculto`)
+    }
     )
 });
 
 function inicio(){
-    let dos = 2;
-    let suma = dos + dos; 
-    subirPantallaInicial();
-    function s(){
-        pantallaMenu.classList.add(`desactivado`)
-    }
-    function d(){
-        pantallaPerder.classList.add(`desactivado`)
-    }
-    s();
-    d();
+    subirPantallaInicial();;
+    pantallaMenu.classList.add(`desactivado`);
+    pantallaPerder.classList.add(`desactivado`);
 }
 
 principal[0].addEventListener(`click`,inicio)

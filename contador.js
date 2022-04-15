@@ -1,7 +1,7 @@
 function contar(){
 
-    minutero.innerHTML = `  `
-    minutero.innerHTML = minutos
+    minutero.innerHTML = `  `;
+    minutero.innerHTML = minutos;
     segundero.innerHTML = `  `;
     segundero.innerHTML = segundos;
     function contarSegundos(){
@@ -17,8 +17,6 @@ function contar(){
             segundos=59;
             minutero.innerHTML = `  `;
             minutero.innerHTML = minutos
-            clearInterval(intervalo)
-
         } 
     }
 setTimeout(function(){intervalo = setInterval(contarSegundos, 1000)},1800)

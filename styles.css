@@ -7,8 +7,7 @@ body{background-color:rgb(240, 240, 240);
     position:absolute;
     overflow:hidden;
     color:#666;
-    font-family: 'Rubik Glitch';
-}
+    font-family: 'Permanent Marker', cursive;}
 
 :root{
     --main-color: linear-gradient(90deg, #dfb4ff 0%,#ffe59c 100%)
@@ -202,5 +201,4 @@ strong{display:block;
     animation-fill-mode: forwards;
 }
 input{
-    font-family: 'Rubik Glitch';
-}
+    font-family: 'Permanent Marker', cursive;}
